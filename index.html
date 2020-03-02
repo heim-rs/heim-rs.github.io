@@ -38,41 +38,48 @@
                 border-top: 1px solid #68D391;
             }
         </style>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var button = document.getElementById('menu');
+                button.onclick = function(e) {
+                    e.preventDefault();
+                    var menu = document.getElementById('navigation-links');
+                    menu.classList.toggle('hidden');
+                };
+            });
+        </script>
     </head>
     <body class="subpixel-antialiased" style="background-color: rgb(236, 236, 236)">
-        <nav class="flex items-center justify-between flex-wrap p-6 ml-32 mr-32">
-            <div class="flex items-center flex-shrink-0 text-black mr-6">
+        <nav class="flex items-center justify-between flex-wrap p-6 lg:ml-32 lg:mr-32">
+            <div class="items-center flex-shrink-0 text-black mr-6 hidden md:flex lg:flex">
                 <img src="./logo.svg" alt="Logo" style="width: 32px; height: 32px;">
             </div>
             <div class="block lg:hidden">
-                <button class="flex items-center px-3 py-2 border rounded text-black border-teal-400 hover:text-white hover:border-white">
-                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>
-                        Menu</title>
-                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
-                    </svg>
+                <button id="menu" class="flex items-center px-3 py-2 border rounded text-black border-black hover:text-white hover:border-white">
+                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
                 </button>
             </div>
-            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto uppercase text-black">
-                <div class="text-sm lg:flex-grow">
-                    <a href="https://heim-rs.github.io/book/" class="block mt-4 lg:inline-block lg:mt-0 mr-4 hover:text-green-900">
+            <div id="navigation-links" class="w-full hidden md:block lg:block flex-grow md:flex lg:flex md:items-center lg:items-center md:w-auto lg:w-auto uppercase text-black">
+                <div class="text-sm md:flex-grow lg:flex-grow">
+                    <a href="https://heim-rs.github.io/book/" class="block mt-4 md:inline-block lg:inline-block lg:mt-0 mr-4 hover:text-green-900">
                         User guide
                     </a>
-                    <a href="https://docs.rs/heim/latest/heim/" class="block mt-4 lg:inline-block lg:mt-0 mr-4 hover:text-green-900">
+                    <a href="https://docs.rs/heim/latest/heim/" class="block mt-4 md:inline-block lg:inline-block lg:mt-0 mr-4 hover:text-green-900">
                         Docs
                     </a>
-                    <a href="https://heim-rs.github.io/book/showcases/index.html" class="block mt-4 lg:inline-block lg:mt-0 mr-4 hover:text-green-900">
+                    <a href="https://heim-rs.github.io/book/showcases/index.html" class="block mt-4 md:inline-block lg:inline-block lg:mt-0 mr-4 hover:text-green-900">
                         Showcases
                     </a>
-                    <a href="https://github.com/heim-rs/heim/tree/master/examples" class="block mt-4 lg:inline-block lg:mt-0 mr-4 hover:text-green-900">
+                    <a href="https://github.com/heim-rs/heim/tree/master/examples" class="block mt-4  md:inline-block lg:inline-block lg:mt-0 mr-4 hover:text-green-900">
                         Examples
                     </a>
                 </div>
                 <div>
-                    <a href="https://gitter.im/heim-rs/heim" class="block mt-4 lg:inline-block lg:mt-0 mr-4 hover:text-green-900">
+                    <a href="https://gitter.im/heim-rs/heim" class="block mt-4  md:inline-block lg:inline-block lg:mt-0 mr-4 hover:text-green-900">
                         <i class="fab fa-gitter mr-1"></i>
                         Chat
                     </a>
-                    <a href="https://github.com/heim-rs/heim" class="block mt-4 lg:inline-block lg:mt-0 mr-4 hover:text-green-900">
+                    <a href="https://github.com/heim-rs/heim" class="block mt-4  md:inline-block lg:inline-block lg:mt-0 mr-4 hover:text-green-900">
                         <i class="fab fa-github mr-1"></i>
                         GitHub
                     </a>
@@ -100,7 +107,7 @@
             </section>
 
             <!-- Features -->
-            <section id="features" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 ml-32 mr-32 mt-10">
+            <section id="features" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 lg:ml-32 lg:mr-32 mt-10">
 
                 <div class="max-w-lg rounded overflow-hidden shadow-none">
                     <div class="px-6 py-6">
@@ -190,7 +197,7 @@
                 </div>
             </section>
 
-            <section id="sponsor" class="ml-32 mr-32 mt-10 pt-12 text-center">
+            <section id="sponsor" class="lg:ml-32 lg:mr-32 mt-10 pt-12 text-center">
                 <h2 class="text-4xl">Sponsoring</h2>
                 <p class="text-black text-lg text-gray-700">
                     If you want to support author or to speed up the project development,<br>
@@ -208,16 +215,16 @@
             </section>
         </article>
 
-        <footer class="flex items-center justify-between flex-wrap p-6 ml-32 mr-32 mt-32 mb-10">
-            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto text-black font-semibold">
-                <div class="text-sm lg:flex-grow">
-                    <a href="https://github.com/heim-rs/heim" class="block mt-4 lg:inline-block lg:mt-0 mr-4 hover:text-green-900">GitHub</a>
-                    <a href="https://heim-rs.github.io/book/" class="block mt-4 lg:inline-block lg:mt-0 mr-4 hover:text-green-900">User guide</a>
-                    <a href="https://docs.rs/heim/latest/heim/" class="block mt-4 lg:inline-block lg:mt-0 mr-4 hover:text-green-900">Docs</a>
-                    <a href="https://github.com/heim-rs/heim/tree/master/examples" class="block mt-4 lg:inline-block lg:mt-0 mr-4 hover:text-green-900">Examples</a>
+        <footer class="flex items-center justify-between flex-wrap p-6 lg:ml-32 lg:mr-32 mt-8 md:mt-16 lg:mt-32 lg:mb-10">
+            <div class="w-full block flex-grow md:flex lg:flex md:items-center lg:items-center md:w-auto lg:w-auto text-black font-semibold">
+                <div class="text-sm md:flex-grow lg:flex-grow">
+                    <a href="https://github.com/heim-rs/heim" class="block mt-4 md:inline-block lg:inline-block md:mt-0 lg:mt-0 mr-4 hover:text-green-900">GitHub</a>
+                    <a href="https://heim-rs.github.io/book/" class="block mt-4 md:inline-block lg:inline-block md:mt-0 lg:mt-0 mr-4 hover:text-green-900">User guide</a>
+                    <a href="https://docs.rs/heim/latest/heim/" class="block mt-4 md:inline-block lg:inline-block md:mt-0 lg:mt-0 mr-4 hover:text-green-900">Docs</a>
+                    <a href="https://github.com/heim-rs/heim/tree/master/examples" class="block mt-4 md:inline-block lg:inline-block md:mt-0 lg:mt-0 mr-4 hover:text-green-900">Examples</a>
                 </div>
             </div>
-            <p class="text-black text-sm text-gray-800">
+            <p class="text-black text-sm text-gray-800 mt-2 md:mt-0 lg:mt-0">
                 © 2019 <a href="https://github.com/svartalf" class="font-semibold">svartalf</a>
                 with the help of <a href="https://github.com/heim-rs/heim/graphs/contributors" class="font-semibold">contributors</a>.
             </p>
