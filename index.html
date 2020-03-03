@@ -50,6 +50,28 @@
                 };
             });
         </script>
+        <script type="application/ld+json">
+            {
+                "@context": "http://schema.org",
+                "@type": "SoftwareSourceCode",
+                "codeRepository": "https://github.com/heim-rs/heim",
+                "codeSampleType": "full solution",
+                "programmingLanguage": "rust",
+                "name": "heim",
+                "description": "Cross-platform async library for system information fetching",
+                "author": {
+                    "@type": "Person",
+                    "name": "svartalf",
+                    "image": "https://svartalf.info/images/photo.jpg",
+                    "jobTitle": "Software engineer",
+                    "url": "https://svartalf.info/",
+                    "sameAs": [
+                        "https://github.com/svartalf",
+                        "https://twitter.com/svartalf"
+                    ]
+                }
+            }
+        </script>
     </head>
     <body class="subpixel-antialiased" style="background-color: rgb(236, 236, 236)">
         <nav class="flex items-center justify-between flex-wrap p-6 lg:ml-32 lg:mr-32">
@@ -88,136 +110,136 @@
                 </div>
             </div>
         </nav>
-        <article class="mx-auto">
-            <section id="intro" class="text-center pt-12 pb-24">
-                <div>
-                    <img src="./logo.svg" alt="Logo" style="width: 128px; height: 128px;" class="inline-block mr-5 ml-6">
-                    <h1 class="text-6xl font-light">heim</h1>
-                    <p class="text-gray-800 text-xl">
-                        Cross-platform async library for system information fetching.
-                        Built with <a href="https://rust-lang.org/">Rust</a> for speed and safety.
-                    </p>
-                </div>
-                <div>
-                    <a class="inline-block mt-4 w-64 bg-green-600 hover:bg-green-900 text-white font-bold py-2 px-4 border border-transparent rounded" href="https://heim-rs.github.io/book/">
-                        Learn more
-                    </a>
-                    <a class="inline-block mt-4 w-64 hover:text-green-900 text-green-600 font-bold py-2 px-4 border border-green-600 rounded" style="background-color: rgb(236, 236, 236)" href="https://docs.rs/heim/latest/heim/">
-                        Documentation
-                    </a>
-                </div>
-            </section>
-
-            <!-- Features -->
-            <section id="features" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 lg:ml-32 lg:mr-32 mt-10">
-
-                <div class="max-w-lg rounded overflow-hidden shadow-none">
-                    <div class="px-6 py-6">
-                        <div class="font-bold text-xl mb-2"><i class="fas fa-microchip mr-1"></i> CPU</div>
-                        <ul class="list-inside text-gray-700 text-sm">
-                            <li>Load average</li>
-                            <li>Logical and physical CPU cores amount</li>
-                            <li>Frequencies</li>
-                            <li>Context switches, interrupts and other counters</li>
-                            <li>Time spent in user, kernel and idle modes</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="max-w-lg rounded overflow-hidden shadow-none">
-                    <div class="px-6 py-6">
-                        <div class="font-bold text-xl mb-2"><i class="fas fa-hdd mr-1"></i> Disks</div>
-                        <ul class="list-inside text-gray-700 text-sm">
-                            <li>Mounted partitions for physical and virtual disks</li>
-                            <li>IO counters for physical and virtual disks</li>
-                            <li>Partition usage statistics</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="max-w-lg rounded overflow-hidden shadow-none">
-                    <div class="px-6 py-6">
-                        <div class="font-bold text-xl mb-2"><i class="fas fa-desktop mr-1"></i> Host</div>
-                        <ul class="list-inside text-gray-700 text-sm">
-                            <li>Uptime</li>
-                            <li>Boot time</li>
-                            <li>Hostname</li>
-                            <li>OS name, version and architecture</li>
-                            <li>Users</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="max-w-lg rounded overflow-hidden shadow-none">
-                    <div class="px-6 py-6">
-                        <div class="font-bold text-xl mb-2"><i class="fas fa-memory mr-1"></i> Memory</div>
-                        <ul class="list-inside text-gray-700 text-sm">
-                            <li>Used and available memory</li>
-                            <li>Used and available swap</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="max-w-lg rounded overflow-hidden shadow-none">
-                    <div class="px-6 py-6">
-                        <div class="font-bold text-xl mb-2"><i class="fas fa-network-wired mr-1"></i>Networks</div>
-                        <ul class="list-inside text-gray-700 text-sm">
-                            <li>Network interfaces</li>
-                            <li>IO counters for network interfaces</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="max-w-lg rounded overflow-hidden shadow-none">
-                    <div class="px-6 py-6">
-                        <div class="font-bold text-xl mb-2"><i class="fas fa-stream mr-1"></i> Processes</div>
-                        <ul class="list-inside text-gray-700 text-sm">
-                            <li>Name, executable, command path and current status</li>
-                            <li>Memory, CPU times and usage</li>
-                            <li>A lot more information available!</li>
-                            <li>Kill, suspend or resume</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="max-w-lg rounded overflow-hidden shadow-none">
-                    <div class="px-6 py-6">
-                        <div class="font-bold text-xl mb-2"><i class="fas fa-temperature-high mr-1"></i> Sensors</div>
-                        <ul class="list-inside text-gray-700 text-sm">
-                            <li>Temperatures</li>
-                            <li>Fans</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="max-w-lg rounded overflow-hidden shadow-none">
-                    <div class="px-6 py-6">
-                        <div class="font-bold text-xl mb-2"><i class="fas fa-box mr-1"></i> Virtualization</div>
-                        <p class="text-gray-700 text-sm">
-                            Are we running in Docker, Podman, Xen, KVM or VMware?
+        <main>
+            <article class="mx-auto">
+                <section id="intro" class="text-center pt-12 pb-24">
+                    <div>
+                        <img src="./logo.svg" alt="Logo" style="width: 128px; height: 128px;" class="inline-block mr-5 ml-6">
+                        <h1 class="text-6xl font-light">heim</h1>
+                        <p class="text-gray-800 text-xl">
+                            Cross-platform async library for system information fetching.
+                            Built with <a href="https://rust-lang.org/">Rust</a> for speed and safety.
                         </p>
                     </div>
-                </div>
-            </section>
+                    <div>
+                        <a class="inline-block mt-4 w-64 bg-green-600 hover:bg-green-900 text-white font-bold py-2 px-4 border border-transparent rounded" href="https://heim-rs.github.io/book/">
+                            Learn more
+                        </a>
+                        <a class="inline-block mt-4 w-64 hover:text-green-900 text-green-600 font-bold py-2 px-4 border border-green-600 rounded" style="background-color: rgb(236, 236, 236)" href="https://docs.rs/heim/latest/heim/">
+                            Documentation
+                        </a>
+                    </div>
+                </section>
 
-            <section id="sponsor" class="lg:ml-32 lg:mr-32 mt-10 pt-12 text-center">
-                <h2 class="text-4xl">Sponsoring</h2>
-                <p class="text-black text-lg text-gray-700">
-                    If you want to support author or to speed up the project development,<br>
-                    feel free to use any of these buttons:
-                </p>
-                <p>
-                    <a class="inline-block mt-4 bg-green-600 hover:bg-green-900 text-white font-bold py-2 px-4 border border-transparent rounded" href="https://opencollective.com/heim-rs">
-                        Become a backer or sponsor at OpenCollective
-                    </a>
-                    <a class="inline-block mt-4 w-64 hover:text-green-900 text-green-600 font-bold py-2 px-4 border border-green-600 rounded" style="background-color: rgb(236, 236, 236)" href="https://svartalf.info/donate/">
-                        Buy me a coffee
-                    </a>
-                </p>
+                <!-- Features -->
+                <section id="features" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 lg:ml-32 lg:mr-32 mt-10">
 
-            </section>
-        </article>
+                    <div class="max-w-lg rounded overflow-hidden shadow-none">
+                        <div class="px-6 py-6">
+                            <div class="font-bold text-xl mb-2"><i class="fas fa-microchip mr-1"></i> CPU</div>
+                            <ul class="list-inside text-gray-700 text-sm">
+                                <li>Load average</li>
+                                <li>Logical and physical CPU cores amount</li>
+                                <li>Frequencies</li>
+                                <li>Context switches, interrupts and other counters</li>
+                                <li>Time spent in user, kernel and idle modes</li>
+                            </ul>
+                        </div>
+                    </div>
 
+                    <div class="max-w-lg rounded overflow-hidden shadow-none">
+                        <div class="px-6 py-6">
+                            <div class="font-bold text-xl mb-2"><i class="fas fa-hdd mr-1"></i> Disks</div>
+                            <ul class="list-inside text-gray-700 text-sm">
+                                <li>Mounted partitions for physical and virtual disks</li>
+                                <li>IO counters for physical and virtual disks</li>
+                                <li>Partition usage statistics</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="max-w-lg rounded overflow-hidden shadow-none">
+                        <div class="px-6 py-6">
+                            <div class="font-bold text-xl mb-2"><i class="fas fa-desktop mr-1"></i> Host</div>
+                            <ul class="list-inside text-gray-700 text-sm">
+                                <li>Uptime</li>
+                                <li>Boot time</li>
+                                <li>Hostname</li>
+                                <li>OS name, version and architecture</li>
+                                <li>Users</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="max-w-lg rounded overflow-hidden shadow-none">
+                        <div class="px-6 py-6">
+                            <div class="font-bold text-xl mb-2"><i class="fas fa-memory mr-1"></i> Memory</div>
+                            <ul class="list-inside text-gray-700 text-sm">
+                                <li>Used and available memory</li>
+                                <li>Used and available swap</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="max-w-lg rounded overflow-hidden shadow-none">
+                        <div class="px-6 py-6">
+                            <div class="font-bold text-xl mb-2"><i class="fas fa-network-wired mr-1"></i>Networks</div>
+                            <ul class="list-inside text-gray-700 text-sm">
+                                <li>Network interfaces</li>
+                                <li>IO counters for network interfaces</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="max-w-lg rounded overflow-hidden shadow-none">
+                        <div class="px-6 py-6">
+                            <div class="font-bold text-xl mb-2"><i class="fas fa-stream mr-1"></i> Processes</div>
+                            <ul class="list-inside text-gray-700 text-sm">
+                                <li>Name, executable, command path and current status</li>
+                                <li>Memory, CPU times and usage</li>
+                                <li>A lot more information available!</li>
+                                <li>Kill, suspend or resume</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="max-w-lg rounded overflow-hidden shadow-none">
+                        <div class="px-6 py-6">
+                            <div class="font-bold text-xl mb-2"><i class="fas fa-temperature-high mr-1"></i> Sensors</div>
+                            <ul class="list-inside text-gray-700 text-sm">
+                                <li>Temperatures</li>
+                                <li>Fans</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="max-w-lg rounded overflow-hidden shadow-none">
+                        <div class="px-6 py-6">
+                            <div class="font-bold text-xl mb-2"><i class="fas fa-box mr-1"></i> Virtualization</div>
+                            <p class="text-gray-700 text-sm">
+                                Are we running in Docker, Podman, Xen, KVM or VMware?
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section id="sponsor" class="lg:ml-32 lg:mr-32 mt-10 pt-12 text-center">
+                    <h2 class="text-4xl">Sponsoring</h2>
+                    <p class="text-black text-lg text-gray-700">
+                        If you want to support author or to speed up the project development,<br>
+                        feel free to use any of these buttons:
+                    </p>
+                    <p>
+                        <a class="inline-block mt-4 bg-green-600 hover:bg-green-900 text-white font-bold py-2 px-4 border border-transparent rounded" href="https://opencollective.com/heim-rs">
+                            Become a backer or sponsor at OpenCollective
+                        </a>
+                        <a class="inline-block mt-4 w-64 hover:text-green-900 text-green-600 font-bold py-2 px-4 border border-green-600 rounded" style="background-color: rgb(236, 236, 236)" href="https://svartalf.info/donate/">
+                            Buy me a coffee
+                        </a>
+                    </p>
+
+                </section>
+            </article>
+        </main>
         <footer class="flex items-center justify-between flex-wrap p-6 lg:ml-32 lg:mr-32 mt-8 md:mt-16 lg:mt-32 lg:mb-10">
             <div class="w-full block flex-grow md:flex lg:flex md:items-center lg:items-center md:w-auto lg:w-auto text-black font-semibold">
                 <div class="text-sm md:flex-grow lg:flex-grow">
@@ -228,7 +250,7 @@
                 </div>
             </div>
             <p class="text-black text-sm text-gray-800 mt-2 md:mt-0 lg:mt-0">
-                © 2019 <a href="https://github.com/svartalf" class="font-semibold">svartalf</a>
+                © 2019 <a href="https://github.com/svartalf" class="font-semibold" rel="author">svartalf</a>
                 with the help of <a href="https://github.com/heim-rs/heim/graphs/contributors" class="font-semibold">contributors</a>.
             </p>
         </footer>
